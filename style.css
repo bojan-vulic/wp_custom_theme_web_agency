@@ -1,0 +1,151 @@
+/*
+Theme Name: Web agency Theme
+Author: Bojan Vulic
+Description: This is one simple theme
+Author URI: htpp://boyan.v@hotmail.com
+Version: 1.0
+Tags: black,white,responsive,two-columns,featured-images,custom-menu,custom-header,post-formats
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+:root {
+    --tamnoPlava: #1d527c; /*rgb(29,82,124)*/
+    --svetloPlava: #459ad3; /*rgb(69,154,211)*/
+    --orange: #fd7f45;/*rgb(253,127,69)*/
+    --tamnoSiva: #3b3c3b;
+    --svtloSiva: lightgray;
+    --bela: #fff;
+    --transition: .3s ease;
+    --padding: 100px 0;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    color: var(--tamnoSiva);
+    line-height: 1.6;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Monserat',sans-serif;
+}
+.button1, .button2 {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: var(--bela);
+    background: transparent;
+    border: 1px solid var(--bela)
+}
+.button2 {
+    background: var(--tamnoPlava);
+    text-decoration: none;
+}
+.button2:hover {
+    color: var(--orange);
+}
+hr {
+    width: 15%;
+    height: 3px !important;
+    background: var(--tamnoPlava);
+}
+/********************
+    navbar
+********************/
+nav {
+    background: linear-gradient(to right,rgba(253,17,69,.9),rgba(29,82,124,.9));
+}
+nav .nav-link, nav .navbar-brand {
+    color: white!important;
+}
+nav .navbar-brand {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+/********************
+    header
+********************/
+header {
+    height: 100vh;
+    background:linear-gradient(rgba(29,82,124,.9),rgba(253,17,69,.9)), url(img/ballon.jpg);
+    background-position: top;
+    background-size: cover;
+}
+/********************
+    about
+********************/
+.about img {
+    width: 100%;
+    box-shadow: 5px 5px var(--tamnoPlava);
+}
+/********************
+    services
+********************/
+.services {
+    background:linear-gradient(rgba(29,82,124,.9),rgba(29,82,124,.9)),  url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.services i {
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+/********************
+    latest post
+********************/
+.latest-posts .featured-image img {
+    width: 100%;
+    height: auto;
+}
+.latest-posts p {
+    text-align: justify;
+}
+.latest-posts hr {
+    margin: auto;
+    width: 15%;
+}
+/********************
+    footer
+********************/
+footer {
+     background:linear-gradient(to right,rgba(253,17,69,.9),rgba(29,82,124,.9)), url(img/ballon.jpg);
+    background-size: cover;
+    background-position: center;
+}
+footer i {
+    color: var(--tamnoPlava);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+/********************
+    single
+********************/
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
+    width: 100%;
+    height: auto;
+   
+}
+.offset-2 {
+    margin-left: 0; 
+    margin: auto;
+}
+.single-header {
+
+    height: 20vh;
+    background-position:50%;
+}
+
+
+
+/********************
+    RESPONSIVE
+*******************/
+@media(max-width: 576px) {
+    .services .col-md-6:first-child .col-md-6 {
+        width: 33%;
+    }
+}
